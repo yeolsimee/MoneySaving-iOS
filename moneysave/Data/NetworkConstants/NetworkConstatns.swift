@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+final class NetworkConstatns {
+    static var baseURL: URL {
+        return URL(string: "http://www.naver.com")!
+    }
+}
+

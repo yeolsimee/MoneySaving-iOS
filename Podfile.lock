@@ -14,6 +14,9 @@ PODS:
   - Firebase/Crashlytics (10.5.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 10.5.0)
+  - Firebase/DynamicLinks (10.5.0):
+    - Firebase/CoreOnly
+    - FirebaseDynamicLinks (~> 10.5.0)
   - Firebase/Functions (10.5.0):
     - Firebase/CoreOnly
     - FirebaseFunctions (~> 10.5.0)
@@ -39,6 +42,8 @@ PODS:
     - GoogleUtilities/Environment (~> 7.8)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (~> 2.1)
+  - FirebaseDynamicLinks (10.5.0):
+    - FirebaseCore (~> 10.0)
   - FirebaseFunctions (10.5.0):
     - FirebaseAppCheckInterop (~> 10.0)
     - FirebaseAuthInterop (~> 10.0)
@@ -135,6 +140,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Crashlytics
+  - Firebase/DynamicLinks
   - Firebase/Functions
   - GoogleSignIn
   - Kingfisher
@@ -158,6 +164,7 @@ SPEC REPOS:
     - FirebaseCoreExtension
     - FirebaseCoreInternal
     - FirebaseCrashlytics
+    - FirebaseDynamicLinks
     - FirebaseFunctions
     - FirebaseInstallations
     - FirebaseMessagingInterop
@@ -194,6 +201,7 @@ SPEC CHECKSUMS:
   FirebaseCoreExtension: 318e5ee9ad4092b00423c2bddd51c3f5c3585973
   FirebaseCoreInternal: e463f41bb935cd049505bf7e9a5bdd7dcea90df6
   FirebaseCrashlytics: ea94bc81f67d5d4702d0c782da13e1483217bac8
+  FirebaseDynamicLinks: 171d116f67eb1e3e2d9841338d23b7c913b659f5
   FirebaseFunctions: bbf9e676d9cafd62c17161c9ff53bcd547e5e336
   FirebaseInstallations: 935bc4abb6f7a035cab7a0c31cb777b2be3dd254
   FirebaseMessagingInterop: 9607c116534fc11e11925a312da989a5dd8e6827
@@ -219,6 +227,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 7afaf2918047213ef0ecc19025eb153d59379bfc
+PODFILE CHECKSUM: 73b3e3c53d0bba23099407ebb04a467cfa228e2e
 
 COCOAPODS: 1.11.2

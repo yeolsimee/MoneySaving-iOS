@@ -8,7 +8,11 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Firebase
+import FirebaseAuth
+import CryptoKit
 import AuthenticationServices
+
 
 protocol AppleServiceProtocol {
     func requestAppleLogin()
@@ -20,11 +24,16 @@ final class AppleService: NSObject, AppleServiceProtocol {
     var disposeBag: DisposeBag = DisposeBag()
     var appleInfo: PublishRelay<[String:Any]> = PublishRelay()
     
+    fileprivate var currentNonce: String?
+    
     override init() {
         super.init()
         
+        let nonce = randomNonceString()
+        currentNonce = nonce
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
+        request.nonce = sha256(nonce)
         
         loginInstance = ASAuthorizationController(authorizationRequests: [request])
         loginInstance?.delegate = self
@@ -37,6 +46,48 @@ final class AppleService: NSObject, AppleServiceProtocol {
     
     func observableAppleInfo() -> Observable<[String:Any]> {
         return appleInfo.asObservable()
+    }
+    
+    private func randomNonceString(length: Int = 32) -> String {
+        precondition(length > 0)
+        let charset: Array<Character> = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+        var result = ""
+        var remainingLength = length
+        
+        while remainingLength > 0 {
+            let randoms: [UInt8] = (0 ..< 16).map { _ in
+                var random: UInt8 = 0
+                let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+                
+                if errorCode != errSecSuccess {
+                    fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
+                }
+                return random
+            }
+            
+            randoms.forEach { random in
+                if length == 0 {
+                    return
+                }
+                
+                if random < charset.count {
+                    result.append(charset[Int(random)])
+                    remainingLength -= 1
+                }
+            }
+        }
+        
+        return result
+    }
+    
+    private func sha256(_ input: String) -> String {
+        let input = Data(input.utf8)
+        let hashed = SHA256.hash(data: input)
+        let hashString = hashed.compactMap {
+            return String(format: "%02x", $0)
+        }.joined()
+        
+        return hashString
     }
 }
 
@@ -59,6 +110,27 @@ extension AppleService: ASAuthorizationControllerDelegate, ASAuthorizationContro
                 userInfo.updateValue(gName, forKey: "gName")
             }
             
+            guard let nonce = currentNonce else {
+                return
+            }
+            
+            guard let appleIDToken = appleIDCredential.identityToken else {
+                return
+            }
+            
+            guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                return
+            }
+            
+            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+            
+            Auth.auth().signIn(with: credential) { authResult, error in
+                if let _ = error {
+                    return
+                }
+                
+                let email = Auth.auth().currentUser?.email
+            }
             appleInfo.accept(userInfo)
         }
     }

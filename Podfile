@@ -17,6 +17,7 @@ target 'moneysave' do
   pod 'Firebase/Auth'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Functions'
+  pod 'Firebase/DynamicLinks'
 
   pod 'SnapKit'
   pod 'Kingfisher'

@@ -30,7 +30,7 @@ final class KakaoService: KakaoServiceProtocol {
                 .withUnretained(self)
                 .subscribe(onNext: { (view, token) in
                     DispatchQueue.main.async {
-                        view.getKakaoInfo()
+                        view.getKakaoInfo(token: token)
                     }
                 }, onError: { error in
                     print(error)
@@ -41,7 +41,7 @@ final class KakaoService: KakaoServiceProtocol {
                 .withUnretained(self)
                 .subscribe(onNext: { (view, token) in
                     DispatchQueue.main.async {
-                        view.getKakaoInfo()
+                        view.getKakaoInfo(token: token)
                     }
                 }, onError: { error in
                     print(error)
@@ -54,11 +54,12 @@ final class KakaoService: KakaoServiceProtocol {
         return kakaoInfo.asObservable()
     }
     
-    private func getKakaoInfo() {
+    private func getKakaoInfo(token: OAuthToken) {
         UserApi.shared.rx.me()
             .subscribe(onSuccess: { [weak self] user in
                 let info = KakaoUserInfo(id: user.id ?? Int64(0),
-                                         nickname: user.kakaoAccount?.profile?.nickname ?? "")
+                                         nickname: user.kakaoAccount?.profile?.nickname ?? "",
+                                         token: token)
                 self?.kakaoInfo.accept(info)
             }, onFailure: { error in
                 print("Kakao UserApi.shared.rx.me onFailure")

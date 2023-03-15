@@ -56,8 +56,9 @@ final class NaverService: NSObject, NaverServiceProtocol {
                       let code = result["resultcode"] as? String else { return }
                 
                 var resultValue = object
-                resultValue.updateValue(code, forKey: "resultcode")
-                
+                resultValue.updateValue(code, forKey: "resultCode")
+                resultValue.updateValue(accessToken, forKey: "accessToken")
+                print("2818 resultValue : \(resultValue)")
                 do {
                     let jsonData: Data = try JSONSerialization.data(withJSONObject: resultValue, options: .sortedKeys)
                     let model = try JSONDecoder().decode(NaverUserInfo.self, from: jsonData)
@@ -89,3 +90,4 @@ extension NaverService: NaverThirdPartyLoginConnectionDelegate {
         print("naver Error : \(error.localizedDescription)")
     }
 }
+

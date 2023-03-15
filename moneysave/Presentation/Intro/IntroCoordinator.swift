@@ -19,8 +19,11 @@ final class IntroCoordinator: Coordinator {
     
     func start() {
         let view = IntroViewController()
-        view.viewModel = IntroViewModel()
-        
-        navigationController.pushViewController(view, animated: true)
+        view.viewModel = IntroViewModel(coordinator: self,
+                                        introUseCase: IntroUseCase(googleService: GoogleService(),
+                                                                  kakaoService: KakaoService(),
+                                                                  naverService: NaverService()),
+                                        presentingView: view)
+        navigationController.pushViewController(view, animated: false)
     }
 }

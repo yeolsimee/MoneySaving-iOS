@@ -17,6 +17,7 @@ struct NaverUserInfo: Codable {
     let gender: String?
     let id: String?
     let code: String?
+    let accessToken: String?
     
     enum CodingKeys: String, CodingKey {
         case ci = "ci"
@@ -28,5 +29,6 @@ struct NaverUserInfo: Codable {
         case gender = "gender"
         case id = "id"
         case code = "resultCode"
+        case accessToken = "accessToken"
     }
 }

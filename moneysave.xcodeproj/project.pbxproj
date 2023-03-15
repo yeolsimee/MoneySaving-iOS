@@ -26,6 +26,17 @@
 		36008E0F29C0D58C00840351 /* NaverUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0E29C0D58C00840351 /* NaverUserInfo.swift */; };
 		36008E1129C0D59000840351 /* KakaoUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1029C0D59000840351 /* KakaoUserInfo.swift */; };
 		36008E1329C1573800840351 /* IntroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1229C1573800840351 /* IntroUseCase.swift */; };
+		36008E1529C1E57300840351 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1429C1E57300840351 /* Router.swift */; };
+		36008E1729C1E58900840351 /* LoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1629C1E58900840351 /* LoginRequestDTO.swift */; };
+		36008E1929C1E58F00840351 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1829C1E58F00840351 /* SignUpRequestDTO.swift */; };
+		36008E1B29C1E5A800840351 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1A29C1E5A800840351 /* LoginRepository.swift */; };
+		36008E1D29C1E5AF00840351 /* SignUpRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1C29C1E5AF00840351 /* SignUpRepository.swift */; };
+		36008E1F29C1E5D200840351 /* NetworkConstatns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1E29C1E5D200840351 /* NetworkConstatns.swift */; };
+		36008E2129C1E5D800840351 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2029C1E5D800840351 /* NetworkMonitor.swift */; };
+		36008E2329C1E5DF00840351 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2229C1E5DF00840351 /* NetworkClient.swift */; };
+		36008E2529C1E61B00840351 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2429C1E61B00840351 /* LoginModel.swift */; };
+		36008E2729C1E62000840351 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2629C1E62000840351 /* SignUpModel.swift */; };
+		36008E2929C1E6F800840351 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2829C1E6F800840351 /* Encodable+Extensions.swift */; };
 		F50CD008A0635B83C3B8B77F /* Pods_moneysave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +63,17 @@
 		36008E0E29C0D58C00840351 /* NaverUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverUserInfo.swift; sourceTree = "<group>"; };
 		36008E1029C0D59000840351 /* KakaoUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserInfo.swift; sourceTree = "<group>"; };
 		36008E1229C1573800840351 /* IntroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroUseCase.swift; sourceTree = "<group>"; };
+		36008E1429C1E57300840351 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		36008E1629C1E58900840351 /* LoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDTO.swift; sourceTree = "<group>"; };
+		36008E1829C1E58F00840351 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
+		36008E1A29C1E5A800840351 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		36008E1C29C1E5AF00840351 /* SignUpRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRepository.swift; sourceTree = "<group>"; };
+		36008E1E29C1E5D200840351 /* NetworkConstatns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstatns.swift; sourceTree = "<group>"; };
+		36008E2029C1E5D800840351 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		36008E2229C1E5DF00840351 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		36008E2429C1E61B00840351 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		36008E2629C1E62000840351 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		36008E2829C1E6F800840351 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moneysave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A7895CDB3526CE00E199D /* Pods-moneysave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneysave.release.xcconfig"; path = "Target Support Files/Pods-moneysave/Pods-moneysave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +216,8 @@
 			children = (
 				36008E1029C0D59000840351 /* KakaoUserInfo.swift */,
 				36008E0E29C0D58C00840351 /* NaverUserInfo.swift */,
+				36008E2429C1E61B00840351 /* LoginModel.swift */,
+				36008E2629C1E62000840351 /* SignUpModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -201,6 +225,9 @@
 		36008DF329C0D29B00840351 /* NetworkConstants */ = {
 			isa = PBXGroup;
 			children = (
+				36008E1E29C1E5D200840351 /* NetworkConstatns.swift */,
+				36008E2029C1E5D800840351 /* NetworkMonitor.swift */,
+				36008E2229C1E5DF00840351 /* NetworkClient.swift */,
 			);
 			path = NetworkConstants;
 			sourceTree = "<group>";
@@ -208,6 +235,8 @@
 		36008DF429C0D2A200840351 /* NetworkRepository */ = {
 			isa = PBXGroup;
 			children = (
+				36008E1A29C1E5A800840351 /* LoginRepository.swift */,
+				36008E1C29C1E5AF00840351 /* SignUpRepository.swift */,
 			);
 			path = NetworkRepository;
 			sourceTree = "<group>";
@@ -215,6 +244,8 @@
 		36008DF529C0D2AD00840351 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				36008E1629C1E58900840351 /* LoginRequestDTO.swift */,
+				36008E1829C1E58F00840351 /* SignUpRequestDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -222,6 +253,7 @@
 		36008DF629C0D2B000840351 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				36008E1429C1E57300840351 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -230,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				36008E0429C0D54700840351 /* Date+Extensions.swift */,
+				36008E2829C1E6F800840351 /* Encodable+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,6 +327,7 @@
 				36008DC829C0CB4E00840351 /* Frameworks */,
 				36008DC929C0CB4E00840351 /* Resources */,
 				2EB0187E11305C90BFBDE8D9 /* [CP] Embed Pods Frameworks */,
+				36008E2A29C1E72800840351 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +402,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moneysave/Pods-moneysave-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		36008E2A29C1E72800840351 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n\n";
+		};
 		99896E519FB212272264F331 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,17 +455,28 @@
 				36008E1329C1573800840351 /* IntroUseCase.swift in Sources */,
 				36008DCF29C0CB4E00840351 /* AppDelegate.swift in Sources */,
 				36008E0529C0D54700840351 /* Date+Extensions.swift in Sources */,
+				36008E2729C1E62000840351 /* SignUpModel.swift in Sources */,
+				36008E1B29C1E5A800840351 /* LoginRepository.swift in Sources */,
+				36008E1F29C1E5D200840351 /* NetworkConstatns.swift in Sources */,
 				36008DEE29C0D17200840351 /* IntroViewModel.swift in Sources */,
 				36008DD129C0CB4E00840351 /* SceneDelegate.swift in Sources */,
 				36008E0D29C0D56000840351 /* GoogleService.swift in Sources */,
+				36008E2529C1E61B00840351 /* LoginModel.swift in Sources */,
 				36008E0729C0D55200840351 /* KakaoService.swift in Sources */,
+				36008E1D29C1E5AF00840351 /* SignUpRepository.swift in Sources */,
 				36008E0129C0D53700840351 /* I18NStrings.swift in Sources */,
+				36008E1529C1E57300840351 /* Router.swift in Sources */,
 				36008E0929C0D55600840351 /* NaverService.swift in Sources */,
 				36008E1129C0D59000840351 /* KakaoUserInfo.swift in Sources */,
 				36008E0329C0D53B00840351 /* LogSet.swift in Sources */,
 				36008E0F29C0D58C00840351 /* NaverUserInfo.swift in Sources */,
+				36008E1729C1E58900840351 /* LoginRequestDTO.swift in Sources */,
 				36008DEC29C0D16C00840351 /* IntroViewController.swift in Sources */,
+				36008E2929C1E6F800840351 /* Encodable+Extensions.swift in Sources */,
+				36008E1929C1E58F00840351 /* SignUpRequestDTO.swift in Sources */,
 				36008DF029C0D18000840351 /* IntroCoordinator.swift in Sources */,
+				36008E2129C1E5D800840351 /* NetworkMonitor.swift in Sources */,
+				36008E2329C1E5DF00840351 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2PCQ2LTL7A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = moneysave/Resources/Info.plist;

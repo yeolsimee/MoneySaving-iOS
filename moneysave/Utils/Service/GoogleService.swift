@@ -5,29 +5,27 @@
 //  Created by Bluewave on 2023/03/15.
 //
 
-import Foundation
 import RxSwift
 import RxCocoa
-import GoogleSignIn
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
 
 protocol GoogleServiceProtocol {
-    func requestGoogleLogin(_ resenting: UIViewController)
+    func requestGoogleLogin(_ presenting: UIViewController)
     func observableGoogleInfo() -> Observable<Bool>
 }
 
-final class GoogleService: GoogleServiceProtocol {
+final class GoogleService: NSObject, GoogleServiceProtocol {
+    let disposeBag: DisposeBag = DisposeBag()
     var googleInfo: PublishRelay<Bool> = PublishRelay()
     
+    var presentingView: UIViewController?
+    
     func requestGoogleLogin(_ presenting: UIViewController) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else {
-            googleInfo.accept(false)
-            return
-        }
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: clientID)
         
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
         
         GIDSignIn.sharedInstance.signIn(withPresenting: presenting) { [weak self] result, error in
             if let _ = error {
@@ -35,11 +33,11 @@ final class GoogleService: GoogleServiceProtocol {
                 return
             }
             
-            if let result = result?.user {
-                let idToken = result.idToken?.tokenString ?? ""
-                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: result.accessToken.tokenString)
+            if let user = result?.user, let token = user.idToken?.tokenString {
+                let credential = GoogleAuthProvider.credential(withIDToken: token, accessToken: user.accessToken.tokenString)
                 
-                Auth.auth().signIn(with: credential) { [weak self] result, error in
+                Auth.auth().signIn(with: credential) { result, error in
+                    
                     if let _ = error {
                         self?.googleInfo.accept(false)
                         return
@@ -49,6 +47,7 @@ final class GoogleService: GoogleServiceProtocol {
                         self?.googleInfo.accept(true)
                     }
                 }
+                
             }
         }
     }
@@ -58,3 +57,4 @@ final class GoogleService: GoogleServiceProtocol {
     }
     
 }
+
