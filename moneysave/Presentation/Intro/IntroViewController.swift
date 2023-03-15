@@ -15,5 +15,7 @@ final class IntroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("")
     }
 }
