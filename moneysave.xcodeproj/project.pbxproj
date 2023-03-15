@@ -3,27 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		36008DCF29C0CB4E00840351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DCE29C0CB4E00840351 /* AppDelegate.swift */; };
 		36008DD129C0CB4E00840351 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DD029C0CB4E00840351 /* SceneDelegate.swift */; };
-		36008DD329C0CB4E00840351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DD229C0CB4E00840351 /* ViewController.swift */; };
-		36008DD629C0CB4E00840351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36008DD429C0CB4E00840351 /* Main.storyboard */; };
 		36008DD829C0CB5000840351 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36008DD729C0CB5000840351 /* Assets.xcassets */; };
 		36008DDB29C0CB5000840351 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36008DD929C0CB5000840351 /* LaunchScreen.storyboard */; };
+		36008DE929C0D13E00840351 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DE829C0D13E00840351 /* AppCoordinator.swift */; };
+		36008DEC29C0D16C00840351 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DEB29C0D16C00840351 /* IntroViewController.swift */; };
+		36008DEE29C0D17200840351 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DED29C0D17200840351 /* IntroViewModel.swift */; };
+		36008DF029C0D18000840351 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DEF29C0D18000840351 /* IntroCoordinator.swift */; };
+		36008DFF29C0D37300840351 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36008DFE29C0D37300840351 /* GoogleService-Info.plist */; };
+		36008E0129C0D53700840351 /* I18NStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0029C0D53700840351 /* I18NStrings.swift */; };
+		36008E0329C0D53B00840351 /* LogSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0229C0D53B00840351 /* LogSet.swift */; };
+		36008E0529C0D54700840351 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0429C0D54700840351 /* Date+Extensions.swift */; };
+		36008E0729C0D55200840351 /* KakaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0629C0D55200840351 /* KakaoService.swift */; };
+		36008E0929C0D55600840351 /* NaverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0829C0D55600840351 /* NaverService.swift */; };
+		36008E0B29C0D55B00840351 /* AppleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0A29C0D55B00840351 /* AppleService.swift */; };
+		36008E0D29C0D56000840351 /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0C29C0D56000840351 /* GoogleService.swift */; };
+		36008E0F29C0D58C00840351 /* NaverUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0E29C0D58C00840351 /* NaverUserInfo.swift */; };
+		36008E1129C0D59000840351 /* KakaoUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1029C0D59000840351 /* KakaoUserInfo.swift */; };
+		36008E1329C1573800840351 /* IntroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E1229C1573800840351 /* IntroUseCase.swift */; };
+		F50CD008A0635B83C3B8B77F /* Pods_moneysave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DF665085FB70DC97EFECF52 /* Pods-moneysave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneysave.debug.xcconfig"; path = "Target Support Files/Pods-moneysave/Pods-moneysave.debug.xcconfig"; sourceTree = "<group>"; };
 		36008DCB29C0CB4E00840351 /* moneysave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moneysave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36008DCE29C0CB4E00840351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36008DD029C0CB4E00840351 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		36008DD229C0CB4E00840351 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		36008DD529C0CB4E00840351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36008DD729C0CB5000840351 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36008DDA29C0CB5000840351 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36008DDC29C0CB5000840351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36008DE829C0D13E00840351 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		36008DEB29C0D16C00840351 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		36008DED29C0D17200840351 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		36008DEF29C0D18000840351 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
+		36008DFE29C0D37300840351 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		36008E0029C0D53700840351 /* I18NStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18NStrings.swift; sourceTree = "<group>"; };
+		36008E0229C0D53B00840351 /* LogSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSet.swift; sourceTree = "<group>"; };
+		36008E0429C0D54700840351 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		36008E0629C0D55200840351 /* KakaoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoService.swift; sourceTree = "<group>"; };
+		36008E0829C0D55600840351 /* NaverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverService.swift; sourceTree = "<group>"; };
+		36008E0A29C0D55B00840351 /* AppleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleService.swift; sourceTree = "<group>"; };
+		36008E0C29C0D56000840351 /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		36008E0E29C0D58C00840351 /* NaverUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverUserInfo.swift; sourceTree = "<group>"; };
+		36008E1029C0D59000840351 /* KakaoUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoUserInfo.swift; sourceTree = "<group>"; };
+		36008E1229C1573800840351 /* IntroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroUseCase.swift; sourceTree = "<group>"; };
+		7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moneysave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3A7895CDB3526CE00E199D /* Pods-moneysave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneysave.release.xcconfig"; path = "Target Support Files/Pods-moneysave/Pods-moneysave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50CD008A0635B83C3B8B77F /* Pods_moneysave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34D2F352BDA35175AA434862 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		36008DC229C0CB4E00840351 = {
 			isa = PBXGroup;
 			children = (
 				36008DCD29C0CB4E00840351 /* moneysave */,
 				36008DCC29C0CB4E00840351 /* Products */,
+				DD54F08C3A8DDB0537099A36 /* Pods */,
+				34D2F352BDA35175AA434862 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +97,189 @@
 		36008DCD29C0CB4E00840351 /* moneysave */ = {
 			isa = PBXGroup;
 			children = (
-				36008DCE29C0CB4E00840351 /* AppDelegate.swift */,
-				36008DD029C0CB4E00840351 /* SceneDelegate.swift */,
-				36008DD229C0CB4E00840351 /* ViewController.swift */,
-				36008DD429C0CB4E00840351 /* Main.storyboard */,
-				36008DD729C0CB5000840351 /* Assets.xcassets */,
+				36008DE229C0D0F600840351 /* Application */,
+				36008DE329C0D0FD00840351 /* Resources */,
+				36008DE429C0D10A00840351 /* Utils */,
+				36008DE529C0D10D00840351 /* Data */,
+				36008DE629C0D10F00840351 /* Domain */,
+				36008DE729C0D11200840351 /* Presentation */,
 				36008DD929C0CB5000840351 /* LaunchScreen.storyboard */,
-				36008DDC29C0CB5000840351 /* Info.plist */,
 			);
 			path = moneysave;
+			sourceTree = "<group>";
+		};
+		36008DE229C0D0F600840351 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				36008DCE29C0CB4E00840351 /* AppDelegate.swift */,
+				36008DD029C0CB4E00840351 /* SceneDelegate.swift */,
+				36008DE829C0D13E00840351 /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		36008DE329C0D0FD00840351 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				36008DFD29C0D2D100840351 /* Localizable */,
+				36008DFC29C0D2CF00840351 /* Fonts */,
+				36008DD729C0CB5000840351 /* Assets.xcassets */,
+				36008DFE29C0D37300840351 /* GoogleService-Info.plist */,
+				36008DDC29C0CB5000840351 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		36008DE429C0D10A00840351 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				36008DFB29C0D2C800840351 /* Error */,
+				36008DFA29C0D2C200840351 /* Constant */,
+				36008DF929C0D2BF00840351 /* Service */,
+				36008DF829C0D2BA00840351 /* Extensions */,
+				36008E0029C0D53700840351 /* I18NStrings.swift */,
+				36008E0229C0D53B00840351 /* LogSet.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		36008DE529C0D10D00840351 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				36008DF629C0D2B000840351 /* Router */,
+				36008DF529C0D2AD00840351 /* DTO */,
+				36008DF429C0D2A200840351 /* NetworkRepository */,
+				36008DF329C0D29B00840351 /* NetworkConstants */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		36008DE629C0D10F00840351 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				36008DF129C0D28700840351 /* UseCases */,
+				36008DF229C0D28E00840351 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		36008DE729C0D11200840351 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				36008DEA29C0D16200840351 /* Intro */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		36008DEA29C0D16200840351 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				36008DEB29C0D16C00840351 /* IntroViewController.swift */,
+				36008DED29C0D17200840351 /* IntroViewModel.swift */,
+				36008DEF29C0D18000840351 /* IntroCoordinator.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		36008DF129C0D28700840351 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				36008E1229C1573800840351 /* IntroUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		36008DF229C0D28E00840351 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				36008E1029C0D59000840351 /* KakaoUserInfo.swift */,
+				36008E0E29C0D58C00840351 /* NaverUserInfo.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		36008DF329C0D29B00840351 /* NetworkConstants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkConstants;
+			sourceTree = "<group>";
+		};
+		36008DF429C0D2A200840351 /* NetworkRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkRepository;
+			sourceTree = "<group>";
+		};
+		36008DF529C0D2AD00840351 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		36008DF629C0D2B000840351 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		36008DF829C0D2BA00840351 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36008E0429C0D54700840351 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36008DF929C0D2BF00840351 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				36008E0629C0D55200840351 /* KakaoService.swift */,
+				36008E0829C0D55600840351 /* NaverService.swift */,
+				36008E0A29C0D55B00840351 /* AppleService.swift */,
+				36008E0C29C0D56000840351 /* GoogleService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		36008DFA29C0D2C200840351 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		36008DFB29C0D2C800840351 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		36008DFC29C0D2CF00840351 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		36008DFD29C0D2D100840351 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
+		DD54F08C3A8DDB0537099A36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DF665085FB70DC97EFECF52 /* Pods-moneysave.debug.xcconfig */,
+				BF3A7895CDB3526CE00E199D /* Pods-moneysave.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36008DDF29C0CB5000840351 /* Build configuration list for PBXNativeTarget "moneysave" */;
 			buildPhases = (
+				99896E519FB212272264F331 /* [CP] Check Pods Manifest.lock */,
 				36008DC729C0CB4E00840351 /* Sources */,
 				36008DC829C0CB4E00840351 /* Frameworks */,
 				36008DC929C0CB4E00840351 /* Resources */,
+				2EB0187E11305C90BFBDE8D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +320,7 @@
 				};
 			};
 			buildConfigurationList = 36008DC629C0CB4E00840351 /* Build configuration list for PBXProject "moneysave" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -127,34 +344,81 @@
 			files = (
 				36008DDB29C0CB5000840351 /* LaunchScreen.storyboard in Resources */,
 				36008DD829C0CB5000840351 /* Assets.xcassets in Resources */,
-				36008DD629C0CB4E00840351 /* Main.storyboard in Resources */,
+				36008DFF29C0D37300840351 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EB0187E11305C90BFBDE8D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moneysave/Pods-moneysave-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-moneysave/Pods-moneysave-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-moneysave/Pods-moneysave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99896E519FB212272264F331 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moneysave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36008DC729C0CB4E00840351 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36008DD329C0CB4E00840351 /* ViewController.swift in Sources */,
+				36008E0B29C0D55B00840351 /* AppleService.swift in Sources */,
+				36008DE929C0D13E00840351 /* AppCoordinator.swift in Sources */,
+				36008E1329C1573800840351 /* IntroUseCase.swift in Sources */,
 				36008DCF29C0CB4E00840351 /* AppDelegate.swift in Sources */,
+				36008E0529C0D54700840351 /* Date+Extensions.swift in Sources */,
+				36008DEE29C0D17200840351 /* IntroViewModel.swift in Sources */,
 				36008DD129C0CB4E00840351 /* SceneDelegate.swift in Sources */,
+				36008E0D29C0D56000840351 /* GoogleService.swift in Sources */,
+				36008E0729C0D55200840351 /* KakaoService.swift in Sources */,
+				36008E0129C0D53700840351 /* I18NStrings.swift in Sources */,
+				36008E0929C0D55600840351 /* NaverService.swift in Sources */,
+				36008E1129C0D59000840351 /* KakaoUserInfo.swift in Sources */,
+				36008E0329C0D53B00840351 /* LogSet.swift in Sources */,
+				36008E0F29C0D58C00840351 /* NaverUserInfo.swift in Sources */,
+				36008DEC29C0D16C00840351 /* IntroViewController.swift in Sources */,
+				36008DF029C0D18000840351 /* IntroCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		36008DD429C0CB4E00840351 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36008DD529C0CB4E00840351 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36008DD929C0CB5000840351 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +546,7 @@
 		};
 		36008DE029C0CB5000840351 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DF665085FB70DC97EFECF52 /* Pods-moneysave.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,7 +554,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PCQ2LTL7A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = moneysave/Info.plist;
+				INFOPLIST_FILE = moneysave/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -310,6 +575,7 @@
 		};
 		36008DE129C0CB5000840351 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF3A7895CDB3526CE00E199D /* Pods-moneysave.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +583,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PCQ2LTL7A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = moneysave/Info.plist;
+				INFOPLIST_FILE = moneysave/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
