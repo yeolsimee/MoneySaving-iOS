@@ -126,9 +126,11 @@ extension AppleService: ASAuthorizationControllerDelegate, ASAuthorizationContro
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let _ = error {
+                    print("이거 탐?")
                     return
                 }
                 
+                print("여기 탐")
                 let email = Auth.auth().currentUser?.email
             }
             appleInfo.accept(userInfo)

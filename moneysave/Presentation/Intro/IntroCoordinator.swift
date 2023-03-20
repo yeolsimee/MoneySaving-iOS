@@ -21,8 +21,9 @@ final class IntroCoordinator: Coordinator {
         let view = IntroViewController()
         view.viewModel = IntroViewModel(coordinator: self,
                                         introUseCase: IntroUseCase(googleService: GoogleService(),
-                                                                  kakaoService: KakaoService(),
-                                                                  naverService: NaverService()),
+                                                                   kakaoService: KakaoService(),
+                                                                   naverService: NaverService(),
+                                                                   appleService: AppleService()),
                                         presentingView: view)
         navigationController.pushViewController(view, animated: false)
     }

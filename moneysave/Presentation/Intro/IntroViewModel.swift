@@ -26,6 +26,7 @@ final class IntroViewModel {
     
     struct Input {
         let btnEvent: Observable<Void>
+        let btn_2Event: Observable<Void>
     }
     
     struct Output {
@@ -35,20 +36,33 @@ final class IntroViewModel {
     func transform(from input: Input, disposeBag: DisposeBag) -> Output {
         let output = Output()
         
+        input.btn_2Event
+            .withUnretained(self)
+            .subscribe(onNext: { (view, _) in
+                fatalError("Two Two Two")
+            })
+            .disposed(by: disposeBag)
         input.btnEvent
             .withUnretained(self)
             .subscribe(onNext: { (view, _) in
-                
+                view.introUseCase.appleLoginStart()
             })
             .disposed(by: disposeBag)
         
-        introUseCase.naverInfo
+        introUseCase.appleInfo
             .observe(on: MainScheduler.asyncInstance)
             .withUnretained(self)
             .subscribe(onNext: { (view, value) in
-                view.test(data: value)
+                print("2929 value : \(value)")
             })
             .disposed(by: disposeBag)
+//        introUseCase.naverInfo
+//            .observe(on: MainScheduler.asyncInstance)
+//            .withUnretained(self)
+//            .subscribe(onNext: { (view, value) in
+//                view.test(data: value)
+//            })
+//            .disposed(by: disposeBag)
         
 //        introUseCase.kakaoInfo
 //            .observe(on: MainScheduler.asyncInstance)
