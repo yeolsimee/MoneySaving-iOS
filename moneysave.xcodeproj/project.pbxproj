@@ -15,7 +15,6 @@
 		36008DEC29C0D16C00840351 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DEB29C0D16C00840351 /* IntroViewController.swift */; };
 		36008DEE29C0D17200840351 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DED29C0D17200840351 /* IntroViewModel.swift */; };
 		36008DF029C0D18000840351 /* IntroCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008DEF29C0D18000840351 /* IntroCoordinator.swift */; };
-		36008DFF29C0D37300840351 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36008DFE29C0D37300840351 /* GoogleService-Info.plist */; };
 		36008E0129C0D53700840351 /* I18NStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0029C0D53700840351 /* I18NStrings.swift */; };
 		36008E0329C0D53B00840351 /* LogSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0229C0D53B00840351 /* LogSet.swift */; };
 		36008E0529C0D54700840351 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E0429C0D54700840351 /* Date+Extensions.swift */; };
@@ -37,6 +36,13 @@
 		36008E2529C1E61B00840351 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2429C1E61B00840351 /* LoginModel.swift */; };
 		36008E2729C1E62000840351 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2629C1E62000840351 /* SignUpModel.swift */; };
 		36008E2929C1E6F800840351 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36008E2829C1E6F800840351 /* Encodable+Extensions.swift */; };
+		365117A129CBE75C00F45721 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365117A029CBE75C00F45721 /* String+Extensions.swift */; };
+		365117A329CC14FC00F45721 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365117A229CC14FC00F45721 /* Int+Extensions.swift */; };
+		365117A629D04F3800F45721 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365117A529D04F3800F45721 /* MainViewController.swift */; };
+		365117A829D04F3C00F45721 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365117A729D04F3C00F45721 /* MainViewModel.swift */; };
+		365117AA29D04F4200F45721 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365117A929D04F4200F45721 /* MainCoordinator.swift */; };
+		365117AC29D09F2F00F45721 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 365117AB29D09F2F00F45721 /* GoogleService-Info.plist */; };
+		3669C9DB29C967E000FDCAF7 /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669C9DA29C967E000FDCAF7 /* UserDefaultKey.swift */; };
 		F50CD008A0635B83C3B8B77F /* Pods_moneysave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +58,6 @@
 		36008DEB29C0D16C00840351 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		36008DED29C0D17200840351 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		36008DEF29C0D18000840351 /* IntroCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroCoordinator.swift; sourceTree = "<group>"; };
-		36008DFE29C0D37300840351 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		36008E0029C0D53700840351 /* I18NStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18NStrings.swift; sourceTree = "<group>"; };
 		36008E0229C0D53B00840351 /* LogSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSet.swift; sourceTree = "<group>"; };
 		36008E0429C0D54700840351 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -74,7 +79,14 @@
 		36008E2429C1E61B00840351 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		36008E2629C1E62000840351 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		36008E2829C1E6F800840351 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		365117A029CBE75C00F45721 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		365117A229CC14FC00F45721 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		365117A529D04F3800F45721 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		365117A729D04F3C00F45721 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		365117A929D04F4200F45721 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		365117AB29D09F2F00F45721 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3669C9D729C8870000FDCAF7 /* moneysave.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moneysave.entitlements; sourceTree = "<group>"; };
+		3669C9DA29C967E000FDCAF7 /* UserDefaultKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKey.swift; sourceTree = "<group>"; };
 		7438282A3E5324A4C8258E9E /* Pods_moneysave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moneysave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A7895CDB3526CE00E199D /* Pods-moneysave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moneysave.release.xcconfig"; path = "Target Support Files/Pods-moneysave/Pods-moneysave.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +160,7 @@
 				36008DFD29C0D2D100840351 /* Localizable */,
 				36008DFC29C0D2CF00840351 /* Fonts */,
 				36008DD729C0CB5000840351 /* Assets.xcassets */,
-				36008DFE29C0D37300840351 /* GoogleService-Info.plist */,
+				365117AB29D09F2F00F45721 /* GoogleService-Info.plist */,
 				36008DDC29C0CB5000840351 /* Info.plist */,
 			);
 			path = Resources;
@@ -190,6 +202,7 @@
 		36008DE729C0D11200840351 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				365117A429D04F2D00F45721 /* Main */,
 				36008DEA29C0D16200840351 /* Intro */,
 			);
 			path = Presentation;
@@ -265,6 +278,8 @@
 			children = (
 				36008E0429C0D54700840351 /* Date+Extensions.swift */,
 				36008E2829C1E6F800840351 /* Encodable+Extensions.swift */,
+				365117A029CBE75C00F45721 /* String+Extensions.swift */,
+				365117A229CC14FC00F45721 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -283,6 +298,7 @@
 		36008DFA29C0D2C200840351 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				3669C9DA29C967E000FDCAF7 /* UserDefaultKey.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -306,6 +322,16 @@
 			children = (
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		365117A429D04F2D00F45721 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				365117A529D04F3800F45721 /* MainViewController.swift */,
+				365117A729D04F3C00F45721 /* MainViewModel.swift */,
+				365117A929D04F4200F45721 /* MainCoordinator.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DD54F08C3A8DDB0537099A36 /* Pods */ = {
@@ -380,7 +406,7 @@
 			files = (
 				36008DDB29C0CB5000840351 /* LaunchScreen.storyboard in Resources */,
 				36008DD829C0CB5000840351 /* Assets.xcassets in Resources */,
-				36008DFF29C0D37300840351 /* GoogleService-Info.plist in Resources */,
+				365117AC29D09F2F00F45721 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,13 +486,17 @@
 				36008E2729C1E62000840351 /* SignUpModel.swift in Sources */,
 				36008E1B29C1E5A800840351 /* LoginRepository.swift in Sources */,
 				36008E1F29C1E5D200840351 /* NetworkConstatns.swift in Sources */,
+				3669C9DB29C967E000FDCAF7 /* UserDefaultKey.swift in Sources */,
+				365117A329CC14FC00F45721 /* Int+Extensions.swift in Sources */,
 				36008DEE29C0D17200840351 /* IntroViewModel.swift in Sources */,
 				36008DD129C0CB4E00840351 /* SceneDelegate.swift in Sources */,
 				36008E0D29C0D56000840351 /* GoogleService.swift in Sources */,
 				36008E2529C1E61B00840351 /* LoginModel.swift in Sources */,
 				36008E0729C0D55200840351 /* KakaoService.swift in Sources */,
 				36008E1D29C1E5AF00840351 /* SignUpRepository.swift in Sources */,
+				365117AA29D04F4200F45721 /* MainCoordinator.swift in Sources */,
 				36008E0129C0D53700840351 /* I18NStrings.swift in Sources */,
+				365117A629D04F3800F45721 /* MainViewController.swift in Sources */,
 				36008E1529C1E57300840351 /* Router.swift in Sources */,
 				36008E0929C0D55600840351 /* NaverService.swift in Sources */,
 				36008E1129C0D59000840351 /* KakaoUserInfo.swift in Sources */,
@@ -475,10 +505,12 @@
 				36008E1729C1E58900840351 /* LoginRequestDTO.swift in Sources */,
 				36008DEC29C0D16C00840351 /* IntroViewController.swift in Sources */,
 				36008E2929C1E6F800840351 /* Encodable+Extensions.swift in Sources */,
+				365117A129CBE75C00F45721 /* String+Extensions.swift in Sources */,
 				36008E1929C1E58F00840351 /* SignUpRequestDTO.swift in Sources */,
 				36008DF029C0D18000840351 /* IntroCoordinator.swift in Sources */,
 				36008E2129C1E5D800840351 /* NetworkMonitor.swift in Sources */,
 				36008E2329C1E5DF00840351 /* NetworkClient.swift in Sources */,
+				365117A829D04F3C00F45721 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

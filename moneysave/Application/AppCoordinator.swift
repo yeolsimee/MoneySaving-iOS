@@ -2,7 +2,7 @@
 //  AppCoordinator.swift
 //  moneysave
 //
-//  Created by Bluewave on 2023/03/15.
+//  Created by Mingoo on 2023/03/15.
 //
 
 import UIKit

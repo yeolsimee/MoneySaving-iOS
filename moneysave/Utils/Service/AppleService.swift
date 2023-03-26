@@ -2,7 +2,7 @@
 //  AppleService.swift
 //  moneysave
 //
-//  Created by Bluewave on 2023/03/15.
+//  Created by Mingoo on 2023/03/15.
 //
 
 import UIKit
@@ -130,7 +130,11 @@ extension AppleService: ASAuthorizationControllerDelegate, ASAuthorizationContro
                     return
                 }
                 
-                print("여기 탐")
+                authResult!.user.getIDToken() { token, error in
+                    print("getToken : \(token)")
+                }
+                
+                print("서버에서 줘야 할 토큰 : \(authResult!.user.getIDToken())")
                 let email = Auth.auth().currentUser?.email
             }
             appleInfo.accept(userInfo)
