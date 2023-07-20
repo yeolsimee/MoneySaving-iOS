@@ -97,7 +97,7 @@ extension AppleService: ASAuthorizationControllerDelegate, ASAuthorizationContro
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             var userInfo: [String:Any] = [:]
             userInfo.updateValue(appleIDCredential.user, forKey: "identifier")
-            
+            print("2222 identifier : \(appleIDCredential.user)")
             if let email = appleIDCredential.email {
                 userInfo.updateValue(email, forKey: "email")
             }
@@ -130,14 +130,14 @@ extension AppleService: ASAuthorizationControllerDelegate, ASAuthorizationContro
                     return
                 }
                 
-                authResult!.user.getIDToken() { token, error in
-                    print("getToken : \(token)")
+                authResult!.user.getIDToken() { [weak self] token, error in
+                    userInfo.updateValue(token ?? "", forKey: "idToken")
+                    print("2222 token : \(token)")
+                    self?.appleInfo.accept(userInfo)
                 }
                 
-                print("서버에서 줘야 할 토큰 : \(authResult!.user.getIDToken())")
                 let email = Auth.auth().currentUser?.email
             }
-            appleInfo.accept(userInfo)
         }
     }
     

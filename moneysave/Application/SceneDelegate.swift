@@ -13,12 +13,13 @@ import GoogleSignIn
 import Firebase
 import FirebaseAuth
 import FirebaseDynamicLinks
+import RxSwift
+import RxCocoa
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
@@ -66,7 +67,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 // MARK: - DynamicLink Set
-
 extension SceneDelegate {
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         if let incomingURL = userActivity.webpageURL {
@@ -86,12 +86,12 @@ extension SceneDelegate {
                             return
                         }
                         
-                        result?.user.getIDTokenResult(forcingRefresh: false) { token, error in
+                        result?.user.getIDTokenResult(forcingRefresh: false) { [weak self] token, error in
                             print("getToken : \(token?.token)")
+                            var userInfo: [AnyHashable:Any] = [:]
+                            userInfo.updateValue(token?.token ?? "", forKey: "emailToken")
+                            NotificationCenter.default.post(name: .init("emailToken"), object: nil, userInfo: userInfo)
                         }
-//                        result?.user.getIDToken() { token, error in
-//                            print("getToken : \(token)")
-//                        }
                     }
                 }
             }

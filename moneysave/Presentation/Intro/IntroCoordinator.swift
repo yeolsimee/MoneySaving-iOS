@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 final class IntroCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     
@@ -20,11 +21,19 @@ final class IntroCoordinator: Coordinator {
     func start() {
         let view = IntroViewController()
         view.viewModel = IntroViewModel(coordinator: self,
-                                        introUseCase: IntroUseCase(googleService: GoogleService(),
-                                                                   kakaoService: KakaoService(),
-                                                                   naverService: NaverService(),
-                                                                   appleService: AppleService()),
-                                        presentingView: view)
+                                        introUseCase: IntroUseCase(emailRepository: LoginRepository()))
         navigationController.pushViewController(view, animated: false)
+    }
+    
+    func pushToLogin() {
+        let coordinator = LoginCoordinator(navigationController: navigationController)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+    }
+    
+    func pushToMain() {
+        let coordinator = MainCoordinator(navigationController: navigationController)
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
 }

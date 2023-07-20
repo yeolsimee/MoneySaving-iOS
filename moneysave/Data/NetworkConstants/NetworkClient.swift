@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NetworkClient {
+final class NetworkClient {
     static let session: Session = {
         let configuration = URLSessionConfiguration.af.default
         let apiLogger = APIMonitor()

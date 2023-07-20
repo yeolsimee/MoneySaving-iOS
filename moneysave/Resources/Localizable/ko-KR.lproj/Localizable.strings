@@ -1,0 +1,80 @@
+/* 
+  Localizable.strings
+  moneysave
+
+  Created by Mingoo on 2023/04/09.
+  
+*/
+
+// MARK: - Public
+logoText = "ROUMO";
+confirm = "확인";
+cancel = "취소";
+add = "추가하기";
+save = "저장하기";
+edit = "수정하기";
+error = "오류";
+
+// MARK: - Main
+home = "홈";
+sugRoutine = "루틴추천";
+mypage = "내정보";
+
+// MARK: - Routine
+routineAdd = "루틴 추가하기";
+routineEdit = "루틴 수정하기";
+routineName = "루틴명은 무엇인가요?";
+routineNamePlace = "루틴명을 입력해주세요";
+routineCategory = "루틴의 카테고리를 설정해주세요";
+routineCategoryPlace = "카테고리명을 입력해주세요";
+routineRepeat = "루틴을 언제 반복할까요?";
+routineTime = "루틴을 수행할 시간대를 설정해주세요";
+routineAlarm = "알림이 필요하세요?";
+routineSubAlarm = "→ 몇시에 알려드릴까요?";
+routineCategoryAdd = "카테고리 추가하기";
+routineAddMsg = "루틴 추가는 당일만 가능해요";
+routineDeleteMsg = "해당 루틴을 정말 삭제 하시겠어요?";
+routineCheckMsg = "루틴 체크는 당일만 가능해요";
+routineSystemPushMsg = "오늘 루틴 체크는 다 완료 하셨나요?";
+
+// MARK: - Login
+loginNaver = "네이버로 로그인";
+loginGoogle = "구글로 로그인";
+loginApple = "Apple로 로그인";
+loginEmail = "그 외 이메일로 로그인";
+loginEmailTitle = "로그인할 이메일을 입력해 주세요";
+loginEmailPlace = "이메일";
+loginEmailVali = "메일형식으로 입력해주세요";
+loginEmailGuide = "인증 메일을 받지 못하셨다면, 스팸 메일함을 확인하시거나 소셜 로그인 방식으로 로그인을 진행해 주세요";
+loginEmailAlertTitle = "인증 메일 발송";
+loginEmailAlert = "메일 주소로 인증 메일이 발송되었어요\n이메일 속 링크로 접속해서 로그인을 완료해 주세요";
+loginTermsTitle = "이용 약관에 동의해 주세요";
+loginTermsAll = "전체동의";
+loginTermsPrivacy = "개인정보 처리방침";
+loginTermsNext = "동의하고 계속하기";
+loginServiceTermsTitle = "서비스 이용 약관";
+loginUserTermsTitle = "개인 정보 처리 방침";
+loginEmailAlertErrorTitle = "인증 실패";
+loginSuccessError = "다른 계정으로 시도해 보세요";
+loginAPIError = "서비스 오류로 인해 로그인이 안되고 있어요\n소셜 로그인을 이용하여 로그인해 주세요";
+
+// MARK: SugRoutine
+sugTitle = "업데이트 예정이에요";
+sugSub = "추후 업데이트 예정이니 조금만 기다려주세요";
+
+// MARK: MyPage
+myPageCategory = "카테고리 수정";
+myPageCategoryMsg = "해당 카테고리를 삭제하시겠습니까?";
+myPagePush = "알림";
+myPageTerms = "서비스 이용 약관";
+myPageIndividual = "개인정보 처리방침";
+myPageHelp = "도움말";
+myPageLogout = "로그아웃";
+myPageLogoutMsg = "계정을 로그아웃 하시겠어요?";
+myPageLeave = "회원탈퇴";
+myPageLeaveMsg = "지금 탈퇴하시면 모든 루틴들이 사라져요!";
+myPageLeaveCancel = "역시 그만둘래요";
+myPagePushOn = "알림이 설정되었어요!";
+myPagePushOff = "알림이 해제되었어요!";
+myPageAppleTitle = "애플로그인";
+myPageAppleMsg = "애플계정이 연동되었습니다\n연동해제를 위해 애플로그인을 진행합니다";

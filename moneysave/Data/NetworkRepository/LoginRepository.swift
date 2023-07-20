@@ -10,20 +10,32 @@ import RxSwift
 import Alamofire
 
 protocol LoginRepositoryProtocol {
-    func requestLogin(dto: LoginRequestDTO,
-                      success: @escaping (LoginModel) -> Void,
+    func requestLogin(success: @escaping (LoginModel) -> Void,
                       failure: @escaping (Error) -> Void)
+    
+    func requestCustomLogin(success: @escaping (LoginModel) -> Void,
+                            failure: @escaping (Error) -> Void)
 }
 
 final class LoginRepository: LoginRepositoryProtocol {
-    func requestLogin(dto: LoginRequestDTO,
-                      success: @escaping (LoginModel) -> Void,
+    func requestLogin(success: @escaping (LoginModel) -> Void,
                       failure: @escaping (Error) -> Void) {
         NetworkClient.request(LoginModel.self,
-                              router: Router.login(dto: dto)) { response in
+                              router: Router.login) { response in
             success(response)
         } failure: { error in
             failure(error)
         }
+    }
+    
+    func requestCustomLogin(success: @escaping (LoginModel) -> Void,
+                            failure: @escaping (Error) -> Void) {
+        NetworkClient.request(LoginModel.self,
+                              router: Router.customLogin) { response in
+            success(response)
+        } failure: { error in
+            failure(error)
+        }
+
     }
 }

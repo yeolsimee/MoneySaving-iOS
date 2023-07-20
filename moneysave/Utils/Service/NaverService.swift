@@ -14,12 +14,14 @@ import Alamofire
 protocol NaverServiceProtocol {
     func requestNaverLogin()
     func observableNaverInfo() -> Observable<NaverUserInfo>
+    func observableLoading() -> Observable<Bool>
 }
 
 final class NaverService: NSObject, NaverServiceProtocol {
     var naverManager: NaverThirdPartyLoginConnection?
     var disposeBag: DisposeBag = DisposeBag()
     var naverInfo: PublishRelay<NaverUserInfo> = PublishRelay()
+    var loadingState: PublishRelay<Bool> = PublishRelay()
     
     override init() {
         super.init()
@@ -39,8 +41,13 @@ final class NaverService: NSObject, NaverServiceProtocol {
     
     private func getNaverInfo() {
         if let accessToken = naverManager?.isValidAccessTokenExpireTimeNow(), accessToken {
+            self.loadingState.accept(true)
+            
             guard let tokenType = naverManager?.tokenType,
-                  let accessToken = naverManager?.accessToken else { return }
+                  let accessToken = naverManager?.accessToken else {
+                self.loadingState.accept(false)
+                return
+            }
             
             let url = URL(string: "https://openapi.naver.com/v1/nid/me")!
             let authorization = "\(tokenType) \(accessToken)"
@@ -65,10 +72,14 @@ final class NaverService: NSObject, NaverServiceProtocol {
                     
                     self?.naverInfo.accept(model)
                 } catch {
-                    
+                    self?.loadingState.accept(false)
                 }
             }
         }
+    }
+    
+    func observableLoading() -> Observable<Bool> {
+        return loadingState.asObservable()
     }
 }
 

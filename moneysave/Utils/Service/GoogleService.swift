@@ -13,12 +13,14 @@ import GoogleSignIn
 
 protocol GoogleServiceProtocol {
     func requestGoogleLogin(_ presenting: UIViewController)
-    func observableGoogleInfo() -> Observable<Bool>
+    func observableGoogleInfo() -> Observable<String>
+    func observableLoading() -> Observable<Bool>
 }
 
 final class GoogleService: NSObject, GoogleServiceProtocol {
     let disposeBag: DisposeBag = DisposeBag()
-    var googleInfo: PublishRelay<Bool> = PublishRelay()
+    var googleInfo: PublishRelay<String> = PublishRelay()
+    var loadingState: PublishRelay<Bool> = PublishRelay()
     
     var presentingView: UIViewController?
     
@@ -28,8 +30,10 @@ final class GoogleService: NSObject, GoogleServiceProtocol {
         
         
         GIDSignIn.sharedInstance.signIn(withPresenting: presenting) { [weak self] result, error in
+            self?.loadingState.accept(true)
+            
             if let _ = error {
-                self?.googleInfo.accept(false)
+                self?.loadingState.accept(false)
                 return
             }
             
@@ -38,23 +42,23 @@ final class GoogleService: NSObject, GoogleServiceProtocol {
                 
                 Auth.auth().signIn(with: credential) { result, error in
                     
-                    if let _ = error {
-                        self?.googleInfo.accept(false)
-                        return
+                    Auth.auth().currentUser?.getIDToken() { token, error in
+                        print("Token : \(token)")
+                        self?.googleInfo.accept(token ?? "")
                     }
                     
-                    if let _ = result {
-                        self?.googleInfo.accept(true)
-                    }
                 }
                 
             }
         }
     }
     
-    func observableGoogleInfo() -> Observable<Bool> {
+    func observableGoogleInfo() -> Observable<String> {
         return googleInfo.asObservable()
     }
     
+    func observableLoading() -> Observable<Bool> {
+        return loadingState.asObservable()
+    }
 }
 

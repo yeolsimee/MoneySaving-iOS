@@ -7,6 +7,7 @@ target 'moneysave' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
 
   pod 'RxKakaoSDKCommon'
   pod 'RxKakaoSDKAuth'
@@ -21,7 +22,10 @@ target 'moneysave' do
 
   pod 'SnapKit'
   pod 'Kingfisher'
-
+  pod 'JTAppleCalendar'
+  pod 'IQKeyboardManagerSwift'
+  pod 'Toast-Swift', '~> 5.0.1'
+  
   # Pods for moneysave
 
 end

@@ -8,33 +8,79 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 final class IntroViewController: UIViewController {
+    // MARK: - View Property
+    private lazy var statusView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    private lazy var contentsView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(imageSet: .splash)
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     let disposeBag: DisposeBag = DisposeBag()
     
     var viewModel: IntroViewModel!
     
-    let btn = UIButton()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btn.setTitle("테스트", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(btn)
-        btn.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        btn.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-        
+        configure()
         bind()
     }
 }
 
 extension IntroViewController {
     func bind() {
-        let input = IntroViewModel.Input(btnEvent: btn.rx.tap.asObservable())
+        let input = IntroViewModel.Input(viewDidLoadEvent: Observable.just(()))
         
-        let output = viewModel.transform(from: input, disposeBag: disposeBag)
+        let _ = viewModel.transform(from: input, disposeBag: disposeBag)
+    }
+    
+    func configure() {
+        view.backgroundColor = .white
+        self.setupToHideKeyboardOnTapOnView()
+        
+        configureViews()
+        configureConstraints()
+    }
+    
+    func configureViews() {
+        [statusView,
+         contentsView].forEach {
+            view.addSubview($0)
+        }
+        
+        contentsView.addSubview(imageView)
+    }
+    
+    func configureConstraints() {
+        statusView.snp.makeConstraints { make in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(UIApplication.shared.statusBarHeight)
+        }
+        
+        contentsView.snp.makeConstraints { make in
+            make.top.equalTo(statusView.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+        }
     }
 }

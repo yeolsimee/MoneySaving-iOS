@@ -12,4 +12,12 @@ enum UserDefaultKey {
     static let isPush_YN = "isPushYN"
     
     static let isRutinPush = "isRutinPush"
+    
+    static let isToken = "isToken"
+    
+    static let isFirstApp = "isFirstApp"
+    
+    static let isSettingPushState = "isSettingPushState"
+    
+    static let isAutoLogin = "isAutoLogin"
 }
